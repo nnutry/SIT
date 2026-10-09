@@ -21,130 +21,78 @@
         <br>
         <form>
             <!--Значениие по ОХ-->
-            <legend>
-                <b>Значение по оси OX</b>
-            </legend>
             <div>
-                <label>
-                    <input type="radio" name="ox">
-                    Тип
-                </label>
-            </div>
+                <legend><b>Значение по оси OX</b></legend>
+                    <label>
+                        <input type="radio" name="ox">
+                        Тип
+                    </label><br>
 
-            <div>
-                <label>
-                    <input type="radio" name="ox">
-                    Страна
-                </label>
-            </div>
+                    <label>
+                        <input type="radio" name="ox">
+                        Страна
+                    </label><br>
 
-            <div>
-                <label>
-                    <input type="radio" name="ox">
-                    Год
-                </label>
+                    <label>
+                        <input type="radio" name="ox">
+                        Год
+                    </label><br>
             </div>
 
             <!--Значениие по OY-->
             <br>
-            <legend>
-                <b>Значение по оси OY</b>
-            </legend>
             <div>
-                <label>
-                    <input type="checkbox" name="oy">
-                    Чето1
-                </label>
-            </div>
+                <legend><b>Значение по оси OY</b></legend>
+                    <label>
+                        <input type="checkbox" name="oy">
+                        Чето1
+                    </label><br>
 
-            <div>
-                <label>
-                    <input type="checkbox" name="oy">
-                    Чето2
-                </label>
-            </div>
+                    <label>
+                        <input type="checkbox" name="oy">
+                        Чето2
+                    </label><br>
 
-            <div>
-                <label>
-                    <input type="checkbox" name="oy">
-                    Чето3
-                </label>
-            </div>
-
-            <br>
-            <div>
-                <input type="button" value="Построить">
+                    <label>
+                        <input type="checkbox" name="oy">
+                        Чето3
+                    </label><br>
+                <br>
+                <div>
+                    <input type="button" value="Построить">
+                </div>
             </div>
         </form>
+        <br>
+        <div>
+            Тут будет график
+        </div>
     </details>
 
-    <br>
-    <div>
-        Тут будет график
-    </div>
-
      <!--Фильтр Фильтр-->
+
     <br>
     <details open="open">
-        <summary> Фильтр </summary>
-        <br>
-        <form>
-            <!--Значениие по ОХ-->
-            <legend>
-                <b>Значение по оси OX</b>
-            </legend>
-            <div>
-                <label>
-                    <input type="radio" name="ox">
-                    Тип
-                </label>
-            </div>
-
-            <div>
-                <label>
-                    <input type="radio" name="ox">
-                    Страна
-                </label>
-            </div>
-
-            <div>
-                <label>
-                    <input type="radio" name="ox">
-                    Год
-                </label>
-            </div>
-
-            <!--Значениие по OY-->
-            <br>
-            <legend>
-                <b>Значение по оси OY</b>
-            </legend>
-            <div>
-                <label>
-                    <input type="checkbox" name="oy">
-                    Чето1
-                </label>
-            </div>
-
-            <div>
-                <label>
-                    <input type="checkbox" name="oy">
-                    Чето2
-                </label>
-            </div>
-
-            <div>
-                <label>
-                    <input type="checkbox" name="oy">
-                    Чето3
-                </label>
-            </div>
-
-            <br>
-            <div>
-                <input type="button" value="Построить">
-            </div>
-        </form>
+        <summary><strong>Фильтр</strong></summary>
+        
+        <p>
+            <label>Название:</label>
+            <input type="text">
+        </p>
+        
+        <p>
+            <label>Тип:</label>
+            <input type="text">
+        </p>
+        
+        <p>
+            <label>Год от:</label>
+            <input type="text" size="10">
+            <label>до</label>
+            <input type="text" size="10">
+        </p>
+        
+        <input type="button" value="Найти">
     </details>
 
 </body>
