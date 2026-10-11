@@ -22,119 +22,259 @@
         <form>
             <!--Значениие по ОХ-->
             <div>
-                <legend><b>Значение по оси OX</b></legend>
-                    <label>
-                        <input type="radio" name="ox">
-                        Тип
-                    </label><br>
-
-                    <label>
-                        <input type="radio" name="ox">
-                        Страна
-                    </label><br>
-
-                    <label>
-                        <input type="radio" name="ox">
-                        Год
-                    </label><br>
-            </div>
+                <legend><b>Значение по оси X</b></legend>
+                <label><input type="radio" name="ox"> Производитель</label><br>
+                <label><input type="radio" name="ox"> Страна</label><br>
+                <label><input type="radio" name="ox"> Год выпуска</label><br>
+            </dвш>
 
             <!--Значениие по OY-->
             <br>
             <div>
-                <legend><b>Значение по оси OY</b></legend>
-                    <label>
-                        <input type="checkbox" name="oy">
-                        Чето1
-                    </label><br>
-
-                    <label>
-                        <input type="checkbox" name="oy">
-                        Чето2
-                    </label><br>
-
-                    <label>
-                        <input type="checkbox" name="oy">
-                        Чето3
-                    </label><br>
-                <br>
-                <div>
-                    <input type="button" value="Построить">
-                </div>
+                <legend><b>Значение по оси Y</b></legend>
+                <label><input type="checkbox" name="oy"> Максимальная цена</label><br>
+                <label><input type="checkbox" name="oy"> Минимальная цена</label><br>
+                <label><input type="checkbox" name="oy"> Количество телефонов</label><br>
             </div>
         </form>
         <br>
         <div>
             Тут будет график
         </div>
+        <br>
     </details>
 
-     <!--Фильтр Фильтр-->
-
-    <br>
-    <details open="open">
+     <!-- Фильтр -->
+    <details open="">
         <summary>Фильтр</summary>
-        
-        <p>
-            <label>Название:</label>
-            <input type="text">
-        </p>
-        
-        <p>
-            <label>Тип:</label>
-            <input type="text">
-        </p>
-        
-        <p>
-            <label>Год от:</label>
-            <input type="text" size="10">
-            <label>до</label>
-            <input type="text" size="10">
-        </p>
-        
-        <input type="button" value="Найти">
+
+        <form>
+            <p>
+                <label>Название модели:</label>
+                <input type="text">
+            </p>
+
+            <p>
+                <label>Производитель:</label>
+                <select>
+                    <option>Все</option>
+                    <option>Apple</option>
+                    <option>Google</option>
+                    <option>Nothing</option>
+                    <option>OnePlus</option>
+                    <option>OPPO</option>
+                    <option>Samsung</option>
+                    <option>Xiaomi</option>
+                </select>
+            </p>
+
+            <p>
+                <label>Страна:</label>
+                <select>
+                    <option>Все</option>
+                    <option>Великобритания</option>
+                    <option>Китай</option>
+                    <option>США</option>
+                    <option>Южная Корея</option>
+                </select>
+            </p>
+
+            <p>
+                <label>Год выпуска от</label>
+                <input type="number" min="1900" max="2100" size="10">
+                <label>до</label>
+                <input type="number" min="1900" max="2100" size="10">
+            </p>
+
+            <p>
+                <label>Цена, $ от</label>
+                <input type="number" min="0">
+                <label>до</label>
+                <input type="number" min="0">
+            </p>
+
+            <p>
+                <label>Семейство процессоров:</label>
+                <select>
+                    <option>Все</option>
+                    <option>Apple A-series</option>
+                    <option>Dimensity</option>
+                    <option>Exynos</option>
+                    <option>Google Tensor</option>
+                    <option>Helio G</option>
+                    <option>MediaTek Dimensity</option>
+                    <option>Samsung Exynos</option>
+                    <option>Snapdragon</option>
+                </select>
+            </p>
+
+            <p>
+                <label>RAM, ГБ от</label>
+                <input type="number" min="0">
+                <label>до</label>
+                <input type="number" min="0">
+            </p>
+
+            <input type="button" value="Найти">
+        </form>
     </details>
 
-    <!--Фильтр Сортировка-->
     <br>
-    <details open="open">
-        <summary>Сортировка</summary>
-        
-        <p>
-            <label>Первый уровень:</label>
-            <select>
-                <option>Нет</option>
-                <option>Чето1</option>
-                <option>Чето2</option>
-            </select>
-            <label>по убыванию?</label>
-            <input type="checkbox">
-        </p>
-        
-        <p>
-            <label>Второй уровень:</label>
-            <select>
-                <option>Нет</option>
-                <option>Чето1</option>
-                <option>Чето2</option>
-            </select>
-            <label>по убыванию?</label>
-            <input type="checkbox">
-        </p>
 
-        <p>
-            <label>Третий уровень:</label>
-            <select>
-                <option>Нет</option>
-                <option>Чето1</option>
-                <option>Чето2</option>
-            </select>
-            <label>по убыванию?</label>
-            <input type="checkbox">
-        </p>
-        
-        <input type="button" value="Сортировать">
+    <!-- Сортировка -->
+    <details open="">
+        <summary>Сортировка</summary>
+
+        <form>
+            <p>
+                <label>Первый уровень:</label>
+                <select>
+                    <option>Нет</option>
+                    <option>Модель</option>
+                    <option>Производитель</option>
+                    <option>Страна</option>
+                    <option>Год выпуска</option>
+                    <option>Цена, $</option>
+                    <option>Семейство процессоров</option>
+                    <option>RAM, ГБ</option>
+                </select>
+                <label>По убыванию</label>
+                <input type="checkbox">
+            </p>
+
+            <p>
+                <label>Второй уровень:</label>
+                <select>
+                    <option>Нет</option>
+                    <option>Модель</option>
+                    <option>Производитель</option>
+                    <option>Страна</option>
+                    <option>Год выпуска</option>
+                    <option>Цена, $</option>
+                    <option>Семейство процессоров</option>
+                    <option>RAM, ГБ</option>
+                </select>
+                <label>По убыванию</label>
+                <input type="checkbox">
+            </p>
+
+            <p>
+                <label>Третий уровень:</label>
+                <select>
+                    <option>Нет</option>
+                    <option>Модель</option>
+                    <option>Производитель</option>
+                    <option>Страна</option>
+                    <option>Год выпуска</option>
+                    <option>Цена, $</option>
+                    <option>Семейство процессоров</option>
+                </select>
+                <label>По убыванию</label>
+                <input type="checkbox">
+            </p>
+
+            <input type="button" value="Сортировать">
+        </form>
     </details>
+
+    <br>
+
+    <!-- Табличка -->
+    <table border="1" cellpadding="6" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Модель</th>
+                <th>Производитель</th>
+                <th>Страна</th>
+                <th>Год выпуска</th>
+                <th>Цена, $</th>
+                <th>Семейство процессоров</th>
+                <th>RAM, ГБ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Find X2 Pro</td><td>OPPO</td><td>Китай</td><td>2020</td><td>1349</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>Find X5 Pro</td><td>OPPO</td><td>Китай</td><td>2022</td><td>1200</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>Find X8 Pro</td><td>OPPO</td><td>Китай</td><td>2024</td><td>1099</td><td>MediaTek Dimensity</td><td>16</td></tr>
+            <tr><td>Galaxy A15 5G</td><td>Samsung</td><td>Южная Корея</td><td>2023</td><td>199</td><td>Dimensity 6000</td><td>4</td></tr>
+            <tr><td>Galaxy A25 5G</td><td>Samsung</td><td>Южная Корея</td><td>2023</td><td>299</td><td>Samsung Exynos</td><td>6</td></tr>
+            <tr><td>Galaxy A35 5G</td><td>Samsung</td><td>Южная Корея</td><td>2024</td><td>399</td><td>Exynos</td><td>6</td></tr>
+            <tr><td>Galaxy A53 5G</td><td>Samsung</td><td>Южная Корея</td><td>2022</td><td>449</td><td>Exynos</td><td>6</td></tr>
+            <tr><td>Galaxy A54 5G</td><td>Samsung</td><td>Южная Корея</td><td>2023</td><td>449</td><td>Exynos</td><td>6</td></tr>
+            <tr><td>Galaxy A55 5G</td><td>Samsung</td><td>Южная Корея</td><td>2024</td><td>479</td><td>Samsung Exynos</td><td>8</td></tr>
+            <tr><td>Galaxy S22</td><td>Samsung</td><td>Южная Корея</td><td>2022</td><td>799</td><td>Snapdragon 8</td><td>8</td></tr>
+            <tr><td>Galaxy S22 Ultra</td><td>Samsung</td><td>Южная Корея</td><td>2022</td><td>1199</td><td>Snapdragon 8</td><td>8</td></tr>
+            <tr><td>Galaxy S23</td><td>Samsung</td><td>Южная Корея</td><td>2023</td><td>799</td><td>Snapdragon 8</td><td>8</td></tr>
+            <tr><td>Galaxy S23 Ultra</td><td>Samsung</td><td>Южная Корея</td><td>2023</td><td>1199</td><td>Snapdragon 8</td><td>8</td></tr>
+            <tr><td>Galaxy S24</td><td>Samsung</td><td>Южная Корея</td><td>2024</td><td>799</td><td>Snapdragon 8</td><td>8</td></tr>
+            <tr><td>Galaxy S24+</td><td>Samsung</td><td>Южная Корея</td><td>2024</td><td>999</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>Galaxy S24 Ultra</td><td>Samsung</td><td>Южная Корея</td><td>2024</td><td>1299</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>Galaxy S25</td><td>Samsung</td><td>Южная Корея</td><td>2025</td><td>799</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>Galaxy S25+</td><td>Samsung</td><td>Южная Корея</td><td>2025</td><td>999</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>Galaxy S25 Ultra</td><td>Samsung</td><td>Южная Корея</td><td>2025</td><td>1299</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>Galaxy Z Flip5</td><td>Samsung</td><td>Южная Корея</td><td>2023</td><td>999</td><td>Snapdragon 8</td><td>8</td></tr>
+            <tr><td>Galaxy Z Flip6</td><td>Samsung</td><td>Южная Корея</td><td>2024</td><td>1099</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>Galaxy Z Fold5</td><td>Samsung</td><td>Южная Корея</td><td>2023</td><td>1799</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>Galaxy Z Fold6</td><td>Samsung</td><td>Южная Корея</td><td>2024</td><td>1899</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>iPhone 11</td><td>Apple</td><td>США</td><td>2019</td><td>699</td><td>Apple A-series</td><td>4</td></tr>
+            <tr><td>iPhone 12</td><td>Apple</td><td>США</td><td>2020</td><td>799</td><td>Apple A-series</td><td>4</td></tr>
+            <tr><td>iPhone 12 Pro</td><td>Apple</td><td>США</td><td>2020</td><td>999</td><td>Apple A-series</td><td>6</td></tr>
+            <tr><td>iPhone 13</td><td>Apple</td><td>США</td><td>2021</td><td>799</td><td>Apple A-series</td><td>4</td></tr>
+            <tr><td>iPhone 14</td><td>Apple</td><td>США</td><td>2022</td><td>799</td><td>Apple A-series</td><td>6</td></tr>
+            <tr><td>iPhone 15</td><td>Apple</td><td>США</td><td>2023</td><td>799</td><td>Apple A-series</td><td>6</td></tr>
+            <tr><td>iPhone 15 Pro</td><td>Apple</td><td>США</td><td>2023</td><td>999</td><td>Apple A-series</td><td>8</td></tr>
+            <tr><td>iPhone 16</td><td>Apple</td><td>США</td><td>2024</td><td>799</td><td>Apple A-series</td><td>8</td></tr>
+            <tr><td>iPhone 16 Pro</td><td>Apple</td><td>США</td><td>2024</td><td>999</td><td>Apple A-series</td><td>8</td></tr>
+            <tr><td>iPhone 16e</td><td>Apple</td><td>США</td><td>2025</td><td>599</td><td>Apple A-series</td><td>8</td></tr>
+            <tr><td>iPhone 17</td><td>Apple</td><td>США</td><td>2025</td><td>799</td><td>Apple A-series</td><td>8</td></tr>
+            <tr><td>iPhone 17 Pro</td><td>Apple</td><td>США</td><td>2025</td><td>1099</td><td>Apple A-series</td><td>12</td></tr>
+            <tr><td>iPhone 17 Pro Max</td><td>Apple</td><td>США</td><td>2025</td><td>1199</td><td>Apple A-series</td><td>12</td></tr>
+            <tr><td>iPhone SE 2020</td><td>Apple</td><td>США</td><td>2020</td><td>399</td><td>Apple A-series</td><td>3</td></tr>
+            <tr><td>Mi 11</td><td>Xiaomi</td><td>Китай</td><td>2021</td><td>899</td><td>Snapdragon 8</td><td>8</td></tr>
+            <tr><td>Nothing Phone (1)</td><td>Nothing</td><td>Великобритания</td><td>2022</td><td>399</td><td>Snapdragon 7</td><td>8</td></tr>
+            <tr><td>Nothing Phone (2)</td><td>Nothing</td><td>Великобритания</td><td>2023</td><td>599</td><td>Snapdragon 8</td><td>8</td></tr>
+            <tr><td>Nothing Phone (2a)</td><td>Nothing</td><td>Великобритания</td><td>2024</td><td>349</td><td>Dimensity 7000</td><td>8</td></tr>
+            <tr><td>Nothing Phone (3)</td><td>Nothing</td><td>Великобритания</td><td>2025</td><td>799</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>Nothing Phone (3a)</td><td>Nothing</td><td>Великобритания</td><td>2025</td><td>379</td><td>Snapdragon 7</td><td>8</td></tr>
+            <tr><td>Nothing Phone (4a) Pro</td><td>Nothing</td><td>Великобритания</td><td>2026</td><td>500</td><td>Snapdragon 7</td><td>8</td></tr>
+            <tr><td>OnePlus 8</td><td>OnePlus</td><td>Китай</td><td>2020</td><td>699</td><td>Snapdragon 8</td><td>8</td></tr>
+            <tr><td>OnePlus 9</td><td>OnePlus</td><td>Китай</td><td>2021</td><td>729</td><td>Snapdragon 8</td><td>8</td></tr>
+            <tr><td>OnePlus 10 Pro</td><td>OnePlus</td><td>Китай</td><td>2022</td><td>899</td><td>Snapdragon 8</td><td>8</td></tr>
+            <tr><td>OnePlus 11</td><td>OnePlus</td><td>Китай</td><td>2023</td><td>699</td><td>Snapdragon 8</td><td>8</td></tr>
+            <tr><td>OnePlus 12</td><td>OnePlus</td><td>Китай</td><td>2024</td><td>799</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>OnePlus 13</td><td>OnePlus</td><td>Китай</td><td>2025</td><td>899</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>OnePlus 15</td><td>OnePlus</td><td>Китай</td><td>2025</td><td>899</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>OnePlus Nord 4</td><td>OnePlus</td><td>Китай</td><td>2024</td><td>499</td><td>Snapdragon 7</td><td>12</td></tr>
+            <tr><td>OnePlus Nord N10 5G</td><td>OnePlus</td><td>Китай</td><td>2020</td><td>299</td><td>Snapdragon 6</td><td>6</td></tr>
+            <tr><td>OnePlus Nord N30 5G</td><td>OnePlus</td><td>Китай</td><td>2023</td><td>299</td><td>Snapdragon 6</td><td>8</td></tr>
+            <tr><td>Pixel 4a</td><td>Google</td><td>США</td><td>2020</td><td>349</td><td>Snapdragon 7</td><td>6</td></tr>
+            <tr><td>Pixel 5</td><td>Google</td><td>США</td><td>2020</td><td>699</td><td>Snapdragon 7</td><td>8</td></tr>
+            <tr><td>Pixel 6</td><td>Google</td><td>США</td><td>2021</td><td>599</td><td>Google Tensor</td><td>8</td></tr>
+            <tr><td>Pixel 6a</td><td>Google</td><td>США</td><td>2022</td><td>449</td><td>Google Tensor</td><td>6</td></tr>
+            <tr><td>Pixel 7</td><td>Google</td><td>США</td><td>2022</td><td>599</td><td>Google Tensor</td><td>8</td></tr>
+            <tr><td>Pixel 7a</td><td>Google</td><td>США</td><td>2023</td><td>499</td><td>Google Tensor</td><td>8</td></tr>
+            <tr><td>Pixel 8</td><td>Google</td><td>США</td><td>2023</td><td>699</td><td>Google Tensor</td><td>8</td></tr>
+            <tr><td>Pixel 8a</td><td>Google</td><td>США</td><td>2024</td><td>499</td><td>Google Tensor</td><td>8</td></tr>
+            <tr><td>Pixel 9</td><td>Google</td><td>США</td><td>2024</td><td>799</td><td>Google Tensor</td><td>12</td></tr>
+            <tr><td>Pixel 9 Pro</td><td>Google</td><td>США</td><td>2024</td><td>999</td><td>Google Tensor</td><td>16</td></tr>
+            <tr><td>Pixel 9a</td><td>Google</td><td>США</td><td>2025</td><td>499</td><td>Google Tensor</td><td>8</td></tr>
+            <tr><td>Pixel 10</td><td>Google</td><td>США</td><td>2025</td><td>799</td><td>Google Tensor</td><td>12</td></tr>
+            <tr><td>POCO X6 Pro</td><td>Xiaomi</td><td>Китай</td><td>2024</td><td>299</td><td>MediaTek Dimensity</td><td>8</td></tr>
+            <tr><td>Redmi 9a</td><td>Xiaomi</td><td>Китай</td><td>2020</td><td>84</td><td>Helio G</td><td>2</td></tr>
+            <tr><td>Redmi Note 12</td><td>Xiaomi</td><td>Китай</td><td>2023</td><td>199</td><td>Snapdragon 4</td><td>4</td></tr>
+            <tr><td>Redmi Note 13 Pro</td><td>Xiaomi</td><td>Китай</td><td>2023</td><td>299</td><td>Snapdragon 7</td><td>8</td></tr>
+            <tr><td>Reno12 Pro</td><td>OPPO</td><td>Китай</td><td>2024</td><td>599</td><td>MediaTek Dimensity</td><td>12</td></tr>
+            <tr><td>Xiaomi 12</td><td>Xiaomi</td><td>Китай</td><td>2022</td><td>749</td><td>Snapdragon 8</td><td>8</td></tr>
+            <tr><td>Xiaomi 13T Pro</td><td>Xiaomi</td><td>Китай</td><td>2023</td><td>849</td><td>Dimensity 9000</td><td>12</td></tr>
+            <tr><td>Xiaomi 14</td><td>Xiaomi</td><td>Китай</td><td>2024</td><td>1079</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>Xiaomi 14T</td><td>Xiaomi</td><td>Китай</td><td>2024</td><td>719</td><td>Dimensity 8000</td><td>12</td></tr>
+            <tr><td>Xiaomi 14T Pro</td><td>Xiaomi</td><td>Китай</td><td>2024</td><td>889</td><td>Dimensity 9000</td><td>12</td></tr>
+            <tr><td>Xiaomi 15</td><td>Xiaomi</td><td>Китай</td><td>2025</td><td>1079</td><td>Snapdragon 8</td><td>12</td></tr>
+            <tr><td>Xiaomi 15 Ultra</td><td>Xiaomi</td><td>Китай</td><td>2025</td><td>1619</td><td>Snapdragon 8</td><td>16</td></tr>
+            <tr><td>Xiaomi 15T</td><td>Xiaomi</td><td>Китай</td><td>2025</td><td>759</td><td>Dimensity 8000</td><td>12</td></tr>
+            <tr><td>Xiaomi 15T Pro</td><td>Xiaomi</td><td>Китай</td><td>2025</td><td>935</td><td>Dimensity 9000</td><td>12</td></tr>
+        </tbody>
+
 
 </body>
 </html>
