@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
+<head>
     <title>
-        Таблица
+        Главная: Телефоны
     </title>
+    <meta charset="utf-8">
+</head>
+
 <body>
-    <head>
-        <meta charset="utf-8">
+    <header>
         <h3>
             <a href="index.html">Главная</a>
             <br>
             <a href="table.html"><big>Самые телефонные телефоны</big></a>
         </h3>
         <hr>
-    </head>
+    </header>
 
     <!--Фильтр График-->
 
@@ -22,16 +25,16 @@
         <form>
             <!--Значениие по ОХ-->
             <div>
-                <legend><b>Значение по оси X</b></legend>
+                <a><b>Значение по оси X</b></a><br>
                 <label><input type="radio" name="ox"> Производитель</label><br>
                 <label><input type="radio" name="ox"> Страна</label><br>
                 <label><input type="radio" name="ox"> Год выпуска</label><br>
-            </dвш>
+            </div>
 
             <!--Значениие по OY-->
             <br>
             <div>
-                <legend><b>Значение по оси Y</b></legend>
+                <a><b>Значение по оси Y</b></a><br>
                 <label><input type="checkbox" name="oy"> Максимальная цена</label><br>
                 <label><input type="checkbox" name="oy"> Минимальная цена</label><br>
                 <label><input type="checkbox" name="oy"> Количество телефонов</label><br>
@@ -81,9 +84,9 @@
 
             <p>
                 <label>Год выпуска от</label>
-                <input type="number" min="1900" max="2100" size="10">
+                <input type="number" min="1900" max="2100">
                 <label>до</label>
-                <input type="number" min="1900" max="2100" size="10">
+                <input type="number" min="1900" max="2100">
             </p>
 
             <p>
@@ -275,14 +278,14 @@
             <tr><td>Xiaomi 15T Pro</td><td>Xiaomi</td><td>Китай</td><td>2025</td><td>935</td><td>Dimensity 9000</td><td>12</td></tr>
         </tbody>
     </table>
-</body>
 
-<div align="center">
     <footer>
-        <br><hr>
-        <p><b>Группа: Б9124-09.03.04(3)</b></p>
-        <p><b>Разработчик: Карманов Артём</b></p>
+        <div align="center">
+            <br><hr>
+            <p><b>Группа: Б9124-09.03.04(3)</b></p>
+            <p><b>Разработчик: Карманов Артём</b></p>
+        </div>
     </footer>
-</div>
 
+</body>
 </html>
